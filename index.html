@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>E-commerce Dashboard</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+    <div class="container">
+        <aside class="sidebar">
+            <div class="menu-section">
+                <h3>Dashboard</h3>
+                <ul>
+                    <li>
+                        <span>📊</span> UI Elements
+                        <ul class="submenu">
+                            <li>Button</li>
+                            <li>Card</li>
+                        </ul>
+                    </li>
+                    <li>
+                        <span>📈</span> Chart
+                        <ul class="submenu">
+                            <li>Bar Chart</li>
+                            <li>Pie Chart</li>
+                        </ul>
+                    </li>
+                    <li><span>📝</span> Forms</li>
+                    <li><span>📋</span> Table</li>
+                </ul>
+            </div>
+            <div class="menu-section">
+                <h3>Features</h3>
+                <ul>
+                    <li><span>📄</span> Pages</li>
+                    <li><span>📱</span> Apps</li>
+                    <li><span>🔣</span> Icons</li>
+                    <li><span>🗺️</span> Maps</li>
+                    <li><span>🗂️</span> Menu Level</li>
+                </ul>
+            </div>
+        </aside>
+        <main class="main-content">
+            <header class="header">
+                <input type="text" class="search-bar" placeholder="Search">
+                <div class="notification">
+                    <span>🔔</span>
+                    <span class="red-dot"></span>
+                </div>
+                <!-- <div class="dots">
+                    <span>•</span>
+                    <span>•</span>
+                    <span>•</span>
+                    <span>•</span>
+                    <span>•</span>
+                    <span>•</span>
+                    <span>•</span>
+                    <span>•</span>
+                    <span>•</span>
+                </div> -->
+                <div class="profile">
+                    <span>👤</span> 
+                </div>
+            </header>
+            <section class="dashboard">
+                <h1>E-commerce Dashboard Template</h1>
+                <h2 class="sub-heading">Dashboard > E-commerce Dashboard Template</h2>
+                <div class="stats">
+                    <div class="stat-block">
+                        <h3>Total Revenue</h3>
+                        <p>$12099</p>
+                        <div class="increase">⬆️ 5.56%</div>
+                        <canvas id="revenueChart"></canvas>
+                    </div>
+                    <div class="stat-block">
+                        <h3>Affiliate Revenue</h3>
+                        <p>$12099</p>
+                        <div class="increase">⬆️ 5.56%</div>
+                        <canvas id="affiliateChart"></canvas>
+                    </div>
+                    <div class="stat-block">
+                        <h3>Refunds</h3>
+                        <p>$0.00</p>
+                        <div class="n/a">N/A</div>
+                        <canvas id="refundChart"></canvas>
+                    </div>
+                    <div class="stat-block">
+                        <h3>Total Revenue</h3>
+                        <p>$28000</p>
+                        <div class="decrease">⬇️ 2.00%</div>
+                        <canvas id="totalRevenueChart"></canvas>
+                    </div>
+                </div>
+                <div class="main-section">
+                    <div class="recent-orders">
+                        <h3>Recent Orders</h3>
+                        <div class="orders-table">
+                            <div class="table-header">
+                                <span>Image</span>
+                                <span>Product Name</span>
+                                <span>Product ID</span>
+                                <span>Quantity</span>
+                                <span>Price</span>
+                                <span>Order Time</span>
+                                <span>Customer</span>
+                                <span>Status</span>
+                            </div>
+                            <div class="table-row">
+                                <span><img src="img1.jpg" alt="Product Image"></span>
+                                <span>Product 1</span>
+                                <span>12345</span>
+                                <span>2</span>
+                                <span>$20.00</span>
+                                <span>12:30 PM</span>
+                                <span>John Doe</span>
+                                <span class="status delivered"><span class="dot delivered"></span>Delivered</span>
+                            </div>
+                            <div class="table-row">
+                                <span><img src="img2.jpg" alt="Product Image"></span>
+                                <span>Product 2</span>
+                                <span>67890</span>
+                                <span>1</span>
+                                <span>$15.00</span>
+                                <span>1:00 PM</span>
+                                <span>Jane Smith</span>
+                                <span class="status in-transit"><span class="dot in-transit"></span>In-transit</span>
+                            </div>
+                            <div class="table-row">
+                                <span><img src="img3.jpg" alt="Product Image"></span>
+                                <span>Product 3</span>
+                                <span>54321</span>
+                                <span>5</span>
+                                <span>$50.00</span>
+                                <span>2:00 PM</span>
+                                <span>Emily Johnson</span>
+                                <span class="status delivered"><span class="dot delivered"></span>Delivered</span>
+                            </div>
+                            <div class="table-row">
+                                <span><img src="img4.jpg" alt="Product Image"></span>
+                                <span>Product 4</span>
+                                <span>98765</span>
+                                <span>3</span>
+                                <span>$30.00</span>
+                                <span>3:00 PM</span>
+                                <span>Michael Brown</span>
+                                <span class="status in-transit"><span class="dot in-transit"></span>In-transit</span>
+                            </div>
+                            <div class="table-row">
+                                <span><img src="img5.jpg" alt="Product Image"></span>
+                                <span>Product 5</span>
+                                <span>67891</span>
+                                <span>4</span>
+                                <span>$40.00</span>
+                                <span>4:00 PM</span>
+                                <span>Sarah Davis</span>
+                                <span class="status delivered"><span class="dot delivered"></span>Delivered</span>
+                            </div>
+                        </div>
+                        <button class="view-details">View Details</button>
+                    </div>
+                    <div class="additional-blocks">
+                        <div class="block">
+                            <h3>Customer Acquisition</h3>
+                            <canvas id="customerAcquisitionChart"></canvas>
+                        </div>
+                        <div class="block">
+                            <h3>Product Category</h3>
+                            <canvas id="productCategoryChart"></canvas>
+                        </div>
+                        <div class="block">
+                            <h3>Product Sales</h3>
+                            <canvas id="productSalesChart"></canvas>
+                        </div>
+                        <div class="block">
+                            <h3>Top Performing Campaigns</h3>
+                            <div class="campaigns">
+                                <div class="campaign-item">Campaigns</div>
+                                <div class="campaign-item">Campaign #1</div>
+                                <div class="campaign-item">Campaign #2</div>
+                                <div class="campaign-item">Campaign #3</div>
+                                <div class="campaign-item">Campaign #4</div>
+                                <div class="campaign-item">Campaign #5</div>
+                            </div>
+                            <button class="view-details">Details</button>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </main>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
